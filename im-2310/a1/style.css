@@ -1,8 +1,8 @@
 * {
-  margin: 0;
-  padding: 0;
-  border: none;
-  font-family: Arial, sans-serif;
+  margin: 30;
+  padding: 50;
+  border: solid orange;
+  font-family: 'Work Sans';
 }
 
 body {

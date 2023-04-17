@@ -1,10 +1,175 @@
-* {
+/* CSS COMMENTS */
+
+/* 
+  - Inverted background color with text color to make navigation easier. 
+  - Made the attribution text and hyperlink text the same color, as it is not 
+    as important to the user's goals.
+  - Having a default "light-mode" setting helps lower the cognitive load on the user experience.
+  - Removed border lines and established a more simple visual heirachy
+ */
+
+/* 
+  Recipe name is set to the centre along with author.
+  This helps the reader know that this is the next recipe on the page
+*/
+
+/* 
+  Adjusted attribution font size and colour to bring it down on the visual heirachy. 
+  Aligned right to signify the connection to the image.
+*/
+
+
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
   margin: 0;
-  padding: 0;
-  border: none;
-  font-family: Arial, sans-serif;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-body {
-  font-size: 14px;
+/* Basis for colour palette comes from 1bit Monitor Glow Palette by Polyducks */
+/* https://lospec.com/palette-list/1bit-monitor-glow */
+/* you're welcome to change the colours if you want or any of the other general page style */
+:root{
+  --col-01:#222323;
+  --col-02:#f0f6f0;
+  --col-03:#52f9ff;
+  --col-04:#59a101;
+  --col-05:#222323a9;
+
+  /* --border: 1px solid var(--col-01); */
 }
+
+
+
+body{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--col-02);
+  color: var(--col-01);
+  padding: 2vw;
+}
+
+a {
+  color: var(--col-01);
+}
+
+h1 {
+  text-align: center;
+  margin: 2vh;
+}
+
+summary {
+  margin: 1vh;
+}
+
+
+.RecipeBox{
+  display: flex;
+  flex-direction: column;
+  border: var(--border);
+  padding: 2vh;
+  margin: auto;
+  margin-bottom: 5vh;
+  max-width: 800px;
+}
+
+.FilterSection{
+color: var(--col-01);
+text-align: center;
+margin: 2vh;
+}
+
+.FilterBox{
+
+}
+
+.FilterButton{
+ border: none;
+}
+
+.SelectedFilter{
+  color: var(--col-04);
+}
+
+
+
+
+
+.RecipeName{
+  text-align: center;
+  margin: 2vh;
+}
+
+.Author{
+  text-align: center;
+  font-weight: bold;
+}
+
+.RecipeLink{
+  text-align: center;
+  color: var(--col-04);
+  padding: 2vh;
+}
+
+.RecipeImageContainer{
+  text-align: center;
+}
+
+.RecipeImg{
+  margin-top: 2vhpx;
+  max-width: 100%;
+}
+
+
+
+
+.Attribution{
+  text-align: right;
+  font-size: x-small;
+  margin-bottom: 2vh;
+  margin-top: 0.5vh;
+  color: var(--col-05);
+}
+
+
+
+.Publisher{
+  margin: 15px;
+}
+
+.Cuisine{
+  margin: 15px;
+}
+
+.TimeToCook{
+  margin: 15px;
+}
+
+.SkillLevel{
+  margin: 15px;
+}
+
+.Course{
+  margin: 15px;
+}
+
+.Servings{
+  margin: 15px;
+}
+
+.Dietary{
+  margin: 15px;
+}
+
+.DatePublished{
+  margin: 15px;
+}
+
+.DateUpdated{
+  margin: 15px;
+}
+
+.SpecialEquipment{
+  margin: 15px;
+}
+

@@ -1,23 +1,72 @@
+<!--DESIGN COMMENTS FOR EXPERIMENT 4 -->
+
+<!-- In summary, I chose to add a playback speed button as if the user experience was listening to spoken dialogue, such as 
+    a podcast or audiobook. A faster playback rate is designed to give the user the audio information faster, helping them reach 
+    the goal of taking in information quickly, or on the go. This is in contrast to a music player, where the listner does not necessarily 
+    need to absorb the content in a time-sensitive manner-->
+
+<!-- The playback rate button was implemented using the .js file, while linking it to the buutton ID in the .html file. Playback rate was set at x2, and I initially
+    made a x2 icon. I then chose to change the icon the the running/waling person as x2 was too fast for one playback rate button. Subsequently I changed 
+    the playback rate to x1.5 -->
+
+<!-- I chose the purple colour theme to represent the visual content on the media player. Should I have designed something that hosted multiple 
+    pieces of visual content, I would have liked to generated some sort of colour theme that adapts to the most prominent colour in the video.
+    I reference the purple theme to The Duncan Trussell Family Hour Podcast, in which this visual content match the atmosphere the DTFH podcast creates-->
+
+<!-- I made the media player adapt to a thinner, smartphone style layout with media queries -->
+
+<!-- The player buttons were boosted in size and a running/walking person icon was illustrated on Adobe Illustrator to signify the playback rate -->
+
+<!-- A slight transition fade was placed upon the player buttons so as to make the user experience smoother. I also rounded the element corners with 
+    the border-radius parametre for this smoothness reason. -->
+
+<!-- The mute button was impemented with the assistance of Patrick -->
+
+
 <!DOCTYPE html>
 
 <html lang="en">
 
-<head>
+  <head>
 
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Player - Hugh F</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="playerControls.js" defer></script>
 
-    <title>Hugh Fuchsen</title>
+  </head>
 
-    <style>
+  <body>
 
-    </style>
+    <!-- this element holds all of the media player -->
+    <div class="video-player-wrapper">
+      <!-- this element holds the video element and the overlay -->
+      <div class="video-element-wrapper">
 
-</head>
+        <video id="videoElement" controls>
+          <source src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4" type="video/mp4">
+        </video>
 
-<body>
+        <img id="videoPlayOverlay" src="./icons/play.svg">
 
- 
+      </div>
+      <!-- this element holds all of the custom controls -->
+      <div class="video-controls-wrapper" id="controlsWrapper">
 
-</body>
+        <button class="video-control-button" id="playButton"></button>
+
+        <button class="video-control-button" id="muteButton"></button>
+
+        <button class="video-control-button" id="playbackRateButton"></button>
+
+        <!-- <a target="_blank" href="https://icons8.com/icon/JorKYZGs8dIu/x2">X2</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> -->
+
+        <progress class="video-progress-bar" id="progressBar" value="0"></progress>
+
+      </div>
+
+    </div>
+
+  </body>
 
 </html>

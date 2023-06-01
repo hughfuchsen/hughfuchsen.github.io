@@ -55,6 +55,10 @@ a:visited {
   color: var(--col-01);
 }
 
+p {
+  user-select: none;
+}
+
 /* throbber to reveal red time bar */
 #load-throbber{
   /* the width, height and background-color give it a shape on the page without any content inside - 

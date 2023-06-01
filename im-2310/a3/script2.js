@@ -56,21 +56,22 @@ function createImages(imageNumber, minTime, maxTime, loadBodyId) {
 
 
   for (var i = 0; i < imageNumber; i++) {
-    // Delay the creation of each image by a random time within 4 seconds
+    // delay the creation of each image by a random time within 4 seconds
     var delay = getRandomNumber(minTime, maxTime);
+
     setTimeout(function() {
     var image = document.createElement("img");
     image.src = "./images/sadFace.png";
     image.classList.add("image-test");
 
 
-    // Set random positions
+    // set random positions
     var posX = getRandomNumber(0, window.innerWidth - 20);
     var posY = getRandomNumber(0, window.innerHeight - 20);
     image.style.left = posX + "px";
     image.style.top = posY + "px";
     
-
+    // generate the image onto the page
     container.appendChild(image);
     }, delay);
   }
@@ -87,6 +88,9 @@ function createDistinctImages(imageNumber, minTime, maxTime, currentPageId, next
     var image = document.createElement("img");
     image.src = "./images/happyFace.png";
     image.classList.add("distinct-image");
+
+    // transition to the next level by clicking on the happy face
+    // go from the current page to the next page by altering certain display attributions
     image.addEventListener("click", e => {
       showPage(currentPageId, nextPageId)});
 

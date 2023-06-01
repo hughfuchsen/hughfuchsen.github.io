@@ -56,11 +56,13 @@ function createImages(imageNumber, minTime, maxTime, loadBodyId) {
 
 
   for (var i = 0; i < imageNumber; i++) {
-    // Delay the creation of each image by a random time within 4 seconds
+    // delay the creation of each image by a random time
     var delay = getRandomNumber(minTime, maxTime);
     setTimeout(function() {
+    // create an image element
     var image = document.createElement("img");
     image.src = "./images/sadFace.png";
+    // add the css class to the element
     image.classList.add("image-test");
 
 
@@ -70,7 +72,7 @@ function createImages(imageNumber, minTime, maxTime, loadBodyId) {
     image.style.left = posX + "px";
     image.style.top = posY + "px";
     
-
+    // generate the number of images randomly over the random time window
     container.appendChild(image);
     }, delay);
   }

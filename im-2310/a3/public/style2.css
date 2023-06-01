@@ -49,6 +49,8 @@ body {
   user-select: none;
 }
 
+a {text-decoration: none;}
+
 a:visited {
   color: var(--col-01);
 }

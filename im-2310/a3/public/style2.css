@@ -1,0 +1,585 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-family: monospace;
+  font-size: 1rem;
+}
+
+:root{
+  --col-01:#5d5d5d;
+  --col-02:#a4ecfc;
+  --col-03:#bbfd89;
+
+  font-size: 16px;
+  /* scroll behaviour makes the <a> links to ids scroll to position over time rather than immediately */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 14px;
+  background-color: var(--col-02);
+  user-select: none;
+}
+
+#load-body{
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color:  var(--col-02);
+  user-select: none;
+}
+ #start-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  padding: 6rem;
+  color: var(--col-01);
+  background-color: rgb(137, 255, 255);
+  user-select: none;
+}
+ #start-button:hover {
+  background-color: aqua;
+  transition: background-color 0.2s linear;
+  user-select: none;
+}
+
+a:visited {
+  color: var(--col-01);
+}
+
+/* throbber to reveal red time bar */
+#load-throbber{
+  /* the width, height and background-color give it a shape on the page without any content inside - 
+  these value are arbitrary, please change to create your own design  */
+  width: 100%;
+  height: 1rem;
+  /* we also initially set display to none so it only shows once the link is clicked */
+  display: none;
+  animation: growBar 10s infinite linear;
+}
+
+/* Shrink the load throbber upwards to reveal the red background color.
+  Makes it look like a red bar growing */
+
+@keyframes growBar {
+  0% {
+    background-color: var(--col-02);
+    height: 100%;
+  }
+  10% {
+
+  }
+  50% {
+
+  }
+  100% {
+    background-color: var(--col-02);
+    height: 0;
+  }
+}
+
+.image-test {
+  position: absolute;
+  width: 5%;
+}
+
+.distinct-image {
+  position: absolute;
+  z-index: 101;
+  cursor: pointer;
+  width: 5%;
+}
+
+
+/* load body id's to switch in and out as parametres of the .js functions */
+
+#load-body-1{
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  background-color:  var(--col-02);
+  user-select: none;
+}
+#load-body-2{
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  background-color:  var(--col-02);
+  user-select: none;
+}
+#load-body-3{
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  background-color:  var(--col-02);
+  user-select: none;
+}
+#load-body-4{
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  background-color:  var(--col-02);
+  user-select: none;
+}
+#load-body-5{
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  background-color:  var(--col-02);
+  user-select: none;
+}
+#load-body-6{
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  background-color:  var(--col-02);
+  user-select: none;
+}
+#load-body-7{
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  background-color:  var(--col-02);
+  user-select: none;
+}
+#load-body-8{
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  background-color:  var(--col-02);
+  user-select: none;
+}
+#load-body-9{
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  background-color:  var(--col-02);
+  user-select: none;
+}
+#load-body-10{
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  background-color:  var(--col-02);
+  user-select: none;
+}
+
+/* load throbber id's to switch in and out as parametres of the .js functions */
+
+
+#load-throbber-1{
+  /* the width, height and background-color give it a shape on the page without any content inside - 
+  these value are arbitrary, please change to create your own design  */
+  width: 100%;
+  height: 1rem;
+  /* we also initially set display to none so it only shows once the link is clicked */
+  display: none;
+  animation: growBar 10s infinite linear;
+}
+#load-throbber-2{
+  width: 100%;
+  height: 1rem;
+  display: none;
+  animation: growBar 10s infinite linear;
+}
+#load-throbber-3{
+  width: 100%;
+  height: 1rem;
+  display: none;
+  animation: growBar 10s infinite linear;
+}
+#load-throbber-4{
+  width: 100%;
+  height: 1rem;
+  display: none;
+  animation: growBar 10s infinite linear;
+}
+#load-throbber-5{
+  width: 100%;
+  height: 1rem;
+  display: none;
+  animation: growBar 10s infinite linear;
+}
+#load-throbber-6{
+  width: 100%;
+  height: 1rem;
+  display: none;
+  animation: growBar 10s infinite linear;
+}
+#load-throbber-7{
+  width: 100%;
+  height: 1rem;
+  display: none;
+  animation: growBar 10s infinite linear;
+}
+#load-throbber-8{
+  width: 100%;
+  height: 1rem;
+  display: none;
+  animation: growBar 10s infinite linear;
+}
+#load-throbber-9{
+  width: 100%;
+  height: 1rem;
+  display: none;
+  animation: growBar 10s infinite linear;
+}
+#load-throbber-10{
+  width: 100%;
+  height: 1rem;
+  display: none;
+  animation: growBar 10s infinite linear;
+}
+
+
+/* level id's to switch in and out as parametres of the .js functions */
+
+#starty {
+  display: block;
+}
+
+#gameOver {
+  display: none;
+}
+
+#lvl {
+  display: none;
+}
+#lvl2 {
+  display: none;
+}
+#lvl3 {
+  display: none;
+}
+#lvl4 {
+  display: none;
+}
+#lvl5 {
+  display: none;
+}
+#lvl6 {
+  display: none;
+}
+#lvl7 {
+  display: none;
+}
+#lvl8 {
+  display: none;
+}
+#lvl9 {
+  display: none;
+}
+#lvl10{
+  display: none;
+}
+
+/* start button id's to switch in and out as parametres of the .js functions */
+/* opcacity transitions to signify interactivity */
+
+#start-button-1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  padding: 6rem;
+  color: var(--col-01);
+  background-color: rgb(137, 255, 255);
+  user-select: none;
+}
+#start-button-1:hover {
+  background-color: aqua;
+  transition: background-color 0.2s linear;
+  user-select: none;
+}
+#start-button-2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  padding: 6rem;
+  color: var(--col-01);
+  background-color: rgb(137, 255, 255);
+  user-select: none;
+}
+#start-button-2:hover {
+  background-color: aqua;
+  transition: background-color 0.2s linear;
+  user-select: none;
+}
+#start-button-3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  padding: 6rem;
+  color: var(--col-01);
+  background-color: rgb(137, 255, 255);
+  user-select: none;
+}
+#start-button-3:hover {
+  background-color: aqua;
+  transition: background-color 0.2s linear;
+  user-select: none;
+}
+#start-button-4 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  padding: 6rem;
+  color: var(--col-01);
+  background-color: rgb(137, 255, 255);
+  user-select: none;
+}
+#start-button-4:hover {
+  background-color: aqua;
+  transition: background-color 0.2s linear;
+  user-select: none;
+}
+#start-button-5 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  padding: 6rem;
+  color: var(--col-01);
+  background-color: rgb(137, 255, 255);
+  user-select: none;
+}
+#start-button-5:hover {
+  background-color: aqua;
+  transition: background-color 0.2s linear;
+  user-select: none;
+}
+#start-button-6 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  padding: 6rem;
+  color: var(--col-01);
+  background-color: rgb(137, 255, 255);
+  user-select: none;
+}
+#start-button-6:hover {
+  background-color: aqua;
+  transition: background-color 0.2s linear;
+  user-select: none;
+}
+#start-button-7 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  padding: 6rem;
+  color: var(--col-01);
+  background-color: rgb(137, 255, 255);
+  user-select: none;
+}
+#start-button-7:hover {
+  background-color: aqua;
+  transition: background-color 0.2s linear;
+  user-select: none;
+}
+#start-button-8 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  padding: 6rem;
+  color: var(--col-01);
+  background-color: rgb(137, 255, 255);
+  user-select: none;
+}
+#start-button-8:hover {
+  background-color: aqua;
+  transition: background-color 0.2s linear;
+  user-select: none;
+}
+#start-button-9 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  padding: 6rem;
+  color: var(--col-01);
+  background-color: rgb(137, 255, 255);
+  user-select: none;
+}
+#start-button-9:hover {
+  background-color: aqua;
+  transition: background-color 0.2s linear;
+  user-select: none;
+}
+#start-button-10 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  padding: 6rem;
+  color: var(--col-01);
+  background-color: rgb(137, 255, 255);
+  user-select: none;
+}
+#start-button-10:hover {
+  background-color: aqua;
+  transition: background-color 0.2s linear;
+  user-select: none;
+}
+#start-button-game-over {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  padding: 6rem;
+  color: var(--col-01);
+  background-color: rgb(137, 255, 255);
+  user-select: none;
+}
+#start-button-game-over:hover {
+  background-color: aqua;
+  transition: background-color 0.2s linear;
+  user-select: none;
+}
+#start-button-10 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  padding: 6rem;
+  color: var(--col-01);
+  background-color: rgb(137, 255, 255);
+  user-select: none;
+}
+#start-button-10:hover {
+  background-color: aqua;
+  transition: background-color 0.2s linear;
+  user-select: none;
+}
+
+
+/* banner id's for the read-me section and restart option */
+/* opacity lowered to adhere to the visual heirachy of the interaction */
+
+#top-banner-restart {
+  display: inline-flex;
+  opacity: 0.6;
+  background-color: rgb(137, 255, 255);
+  padding: 3rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* width: 10%; */
+  z-index: 100;
+  justify-content: space-between;
+}
+#top-banner-restart:hover {
+  opacity: 0.6;
+  background-color: aqua;
+  transition: background-color 0.2s linear;
+}
+#top-banner-read-me {
+  display: inline-flex;
+  opacity: 0.6;
+  background-color: rgb(137, 255, 255);
+  padding: 3rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  /* width: 10%; */
+  z-index: 100;
+  justify-content: space-between;
+}
+#top-banner-read-me:hover {
+  opacity: 0.6;
+  background-color: aqua;
+  transition: background-color 0.2s linear;
+}
+#top-banner-mute {
+  opacity: 0.8;
+  background-color: rgb(137, 255, 255);
+  padding: 3rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  /* width: 10%; */
+  z-index: 100;
+  display: inline-flex;
+  text-align: center;
+  user-select: none;
+}
+#top-banner-mute:hover {
+  opacity: 0.8;
+  background-color: aqua;
+  transition: background-color 0.2s linear;
+  user-select: none;
+}
+@media (max-width: 600px) {
+  /* CSS rules to apply for small screens */
+  .image-test {
+    width: 10%;
+  }
+  
+  .distinct-image {
+    width: 10%;
+  }
+  
+}
